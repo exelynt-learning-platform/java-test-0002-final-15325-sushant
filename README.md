@@ -2,20 +2,27 @@
 Final Project Assignment - This repository contains the complete final project code and documentation.
 public class Main {
     public static void main(String[] args) {
-        int n = 5;
+        final int TOTAL_ROWS = 5;
 
-        for (int i = 1; i <= n; i++) {
+        for (int row = 1; row <= TOTAL_ROWS; row++) {
 
-            for (int j = 1; j <= n - i; j++) {
+            
+            for (int space = 1; space <= TOTAL_ROWS - row; space++) {
                 System.out.print("  ");
             }
 
-            for (int j = 1; j <= i; j++) {
-                System.out.print(j + " ");
+            
+            for (int col = 1; col <= row; col++) {
+                System.out.print(col + " ");
             }
 
-            for (int j = i - 1; j >= 1; j--) {
-                System.out.print(j + " ");
+          
+            for (int col = row - 1; col >= 1; col--) {
+                System.out.print(col);
+
+                if (col > 1) {
+                    System.out.print(" ");
+                }
             }
 
             System.out.println();
